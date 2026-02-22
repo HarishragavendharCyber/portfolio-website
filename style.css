@@ -38,14 +38,11 @@ header {
   font-weight: bold;
 }
 
+/* Nav links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
-}
-
-.nav-links li {
-  margin: 0;
 }
 
 .nav-links a {
@@ -86,18 +83,26 @@ header {
   align-items: center;
 }
 
+.home h1 {
+  font-size: 42px;
+  text-align: center;
+}
+
 .home span {
   color: #00c3ff;
 }
 
 .home p {
   margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
 }
 
+/* Button */
 .btn {
   display: inline-block;
   margin-top: 20px;
-  padding: 10px 25px;
+  padding: 12px 30px;
   background: #00c3ff;
   color: #000;
   text-decoration: none;
@@ -106,7 +111,7 @@ header {
 }
 
 .btn:hover {
-  background: #00a3d9;
+  background: #009fd1;
 }
 
 /* ===== SKILLS ===== */
@@ -115,6 +120,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
+  max-width: 100%;
 }
 
 .skill {
@@ -136,6 +142,21 @@ header {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* ===== CONTACT ===== */
+#contact p {
+  margin: 10px 0;
+  font-size: 17px;
+}
+
+#contact a {
+  color: #00c3ff;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
 /* ===== FOOTER ===== */
 footer {
   background: #0a1a3f;
@@ -145,22 +166,31 @@ footer {
 }
 
 /* ========================= */
-/* RESPONSIVE (MOBILE) */
+/* MOBILE RESPONSIVE FIX */
 /* ========================= */
 @media (max-width: 768px) {
 
   header {
-    padding: 15px;
+    padding: 12px;
   }
 
   .navbar {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
   }
 
   .nav-links {
     flex-direction: column;
-    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 8px 0;
   }
 
   .section {
@@ -168,16 +198,16 @@ footer {
   }
 
   .home h1 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .home p {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .btn {
-    width: 100%;
-    max-width: 250px;
+    width: 90%;
+    max-width: 260px;
     text-align: center;
   }
 }
