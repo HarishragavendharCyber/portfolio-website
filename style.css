@@ -1,4 +1,4 @@
-/* RESET */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -6,160 +6,178 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* BODY */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   line-height: 1.6;
   color: #333;
 }
 
-/* HEADER */
+/* ===== NAVBAR ===== */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: #111;
-  color: white;
+  background: #0a1a3f;
+  padding: 15px 30px;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.logo {
-  font-size: 24px;
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav ul {
-  display: flex;
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
   list-style: none;
+  display: flex;
   gap: 20px;
 }
 
-nav ul li a {
-  color: white;
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav ul li a:hover {
-  color: #00adb5;
+.nav-links a:hover {
+  color: #00c3ff;
 }
 
-/* HOME */
-.home {
-  height: 100vh;
-  background: linear-gradient(to right, #00adb5, #393e46);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+/* ===== SECTIONS ===== */
+.section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
   text-align: center;
-  padding: 20px;
 }
 
-.home-content h1 {
-  font-size: 42px;
+.section h2 {
+  margin-bottom: 20px;
+  color: #0a1a3f;
 }
 
-.home-content p {
-  margin: 15px 0;
-  font-size: 18px;
+.gray {
+  background: #f4f4f4;
+}
+
+/* ===== HOME ===== */
+.home {
+  background: linear-gradient(to right, #0a1a3f, #003366);
+  color: white;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home span {
+  color: #00c3ff;
+}
+
+.home p {
+  margin-top: 10px;
 }
 
 .btn {
   display: inline-block;
+  margin-top: 20px;
   padding: 10px 25px;
-  background: white;
-  color: #333;
+  background: #00c3ff;
+  color: #000;
   text-decoration: none;
   border-radius: 5px;
-  margin-top: 10px;
   font-weight: bold;
 }
 
-/* SECTIONS */
-section {
-  padding: 60px 80px;
-  text-align: center;
+.btn:hover {
+  background: #00a3d9;
 }
 
-section h2 {
-  margin-bottom: 20px;
-  font-size: 32px;
-}
-
-/* SKILLS */
-.skills-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+/* ===== SKILLS ===== */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 20px;
 }
 
 .skill {
-  background: #00adb5;
+  background: #0a1a3f;
   color: white;
-  padding: 15px;
+  margin: 10px;
+  padding: 12px 18px;
   border-radius: 5px;
-  font-weight: bold;
+  font-size: 15px;
 }
 
-/* PROJECTS */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
+/* ===== PROJECTS ===== */
 .project-card {
-  background: #f4f4f4;
+  max-width: 600px;
+  margin: 25px auto;
+  background: white;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* CONTACT */
-#contact p {
-  margin: 10px 0;
-  font-size: 18px;
-}
-
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer {
-  background: #111;
+  background: #0a1a3f;
   color: white;
   text-align: center;
   padding: 15px;
 }
 
 /* ========================= */
-/* MOBILE RESPONSIVE STYLES */
+/* RESPONSIVE (MOBILE) */
 /* ========================= */
 @media (max-width: 768px) {
 
   header {
-    flex-direction: column;
-    gap: 15px;
+    padding: 15px;
   }
 
-  nav ul {
+  .navbar {
     flex-direction: column;
     gap: 10px;
   }
 
-  .home-content h1 {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section {
+    padding: 40px 15px;
+  }
+
+  .home h1 {
     font-size: 28px;
   }
 
-  .home-content p {
+  .home p {
     font-size: 16px;
-  }
-
-  section {
-    padding: 40px 20px;
   }
 
   .btn {
     width: 100%;
     max-width: 250px;
+    text-align: center;
   }
 }
