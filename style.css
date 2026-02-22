@@ -61,6 +61,9 @@ header {
   max-width: 1100px;
   margin: auto;
   text-align: center;
+
+  /* 🔧 FIX: anchor link issue with sticky navbar */
+  scroll-margin-top: 90px;
 }
 
 .section h2 {
@@ -81,6 +84,9 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  /* Home section also needs offset */
+  scroll-margin-top: 90px;
 }
 
 .home h1 {
@@ -195,6 +201,11 @@ footer {
 
   .section {
     padding: 40px 15px;
+    scroll-margin-top: 120px; /* extra space for mobile navbar */
+  }
+
+  .home {
+    scroll-margin-top: 120px;
   }
 
   .home h1 {
